@@ -13,6 +13,9 @@
 		4B8930871EF5A1A100F53C31 /* youtube_mockup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B8930851EF5A1A100F53C31 /* youtube_mockup.xcdatamodeld */; };
 		4B8930891EF5A1A100F53C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B8930881EF5A1A100F53C31 /* Assets.xcassets */; };
 		4B89308C1EF5A1A100F53C31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B89308A1EF5A1A100F53C31 /* LaunchScreen.storyboard */; };
+		4B8930941EF5A39C00F53C31 /* homeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8930931EF5A39C00F53C31 /* homeCollectionViewCell.swift */; };
+		4B8930971EF5CBF900F53C31 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8930961EF5CBF900F53C31 /* extensions.swift */; };
+		4B8930A31EF5E37F00F53C31 /* menuBarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8930A21EF5E37F00F53C31 /* menuBarCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		4B8930881EF5A1A100F53C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B89308B1EF5A1A100F53C31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B89308D1EF5A1A100F53C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B8930931EF5A39C00F53C31 /* homeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeCollectionViewCell.swift; sourceTree = "<group>"; };
+		4B8930961EF5CBF900F53C31 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		4B8930A21EF5E37F00F53C31 /* menuBarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuBarCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				4B89307E1EF5A1A100F53C31 /* AppDelegate.swift */,
-				4B8930801EF5A1A100F53C31 /* ViewController.swift */,
+				4B8930951EF5CBE800F53C31 /* Helpers */,
+				4B8930981EF5CC3500F53C31 /* controller */,
+				4B8930991EF5CD2D00F53C31 /* View */,
 				4B8930821EF5A1A100F53C31 /* Main.storyboard */,
 				4B8930881EF5A1A100F53C31 /* Assets.xcassets */,
 				4B89308A1EF5A1A100F53C31 /* LaunchScreen.storyboard */,
@@ -65,6 +73,31 @@
 				4B8930851EF5A1A100F53C31 /* youtube_mockup.xcdatamodeld */,
 			);
 			path = "youtube mockup";
+			sourceTree = "<group>";
+		};
+		4B8930951EF5CBE800F53C31 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4B8930961EF5CBF900F53C31 /* extensions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		4B8930981EF5CC3500F53C31 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B8930801EF5A1A100F53C31 /* ViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		4B8930991EF5CD2D00F53C31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B8930931EF5A39C00F53C31 /* homeCollectionViewCell.swift */,
+				4B8930A21EF5E37F00F53C31 /* menuBarCollectionViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8930971EF5CBF900F53C31 /* extensions.swift in Sources */,
 				4B8930871EF5A1A100F53C31 /* youtube_mockup.xcdatamodeld in Sources */,
 				4B8930811EF5A1A100F53C31 /* ViewController.swift in Sources */,
+				4B8930A31EF5E37F00F53C31 /* menuBarCollectionViewCell.swift in Sources */,
 				4B89307F1EF5A1A100F53C31 /* AppDelegate.swift in Sources */,
+				4B8930941EF5A39C00F53C31 /* homeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

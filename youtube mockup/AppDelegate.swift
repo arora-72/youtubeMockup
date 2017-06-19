@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,6 +20,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        
+        //get rid of black nav bar underneath
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(),for: .default)
+        
+        let statusBarBackgroundview = UIView()
+        statusBarBackgroundview.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 31)
+        
+        window?.addSubview(statusBarBackgroundview)
+        
+        /*
+        red status bar distinct to be done 
+        solution: given programitically and constraints set by code
+        To find:  solution via using storyBoard
+         */
+        
         return true
     }
 
