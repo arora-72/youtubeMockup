@@ -16,6 +16,7 @@
 		4B8930941EF5A39C00F53C31 /* homeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8930931EF5A39C00F53C31 /* homeCollectionViewCell.swift */; };
 		4B8930971EF5CBF900F53C31 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8930961EF5CBF900F53C31 /* extensions.swift */; };
 		4B8930A31EF5E37F00F53C31 /* menuBarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8930A21EF5E37F00F53C31 /* menuBarCollectionViewCell.swift */; };
+		4B8930EC1EF8498C00F53C31 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8930EB1EF8498C00F53C31 /* Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4B8930931EF5A39C00F53C31 /* homeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeCollectionViewCell.swift; sourceTree = "<group>"; };
 		4B8930961EF5CBF900F53C31 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		4B8930A21EF5E37F00F53C31 /* menuBarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuBarCollectionViewCell.swift; sourceTree = "<group>"; };
+		4B8930EB1EF8498C00F53C31 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +64,12 @@
 		4B89307D1EF5A1A100F53C31 /* youtube mockup */ = {
 			isa = PBXGroup;
 			children = (
-				4B89307E1EF5A1A100F53C31 /* AppDelegate.swift */,
+				4B8930EA1EF8498100F53C31 /* Model */,
 				4B8930951EF5CBE800F53C31 /* Helpers */,
 				4B8930981EF5CC3500F53C31 /* controller */,
 				4B8930991EF5CD2D00F53C31 /* View */,
 				4B8930821EF5A1A100F53C31 /* Main.storyboard */,
+				4B89307E1EF5A1A100F53C31 /* AppDelegate.swift */,
 				4B8930881EF5A1A100F53C31 /* Assets.xcassets */,
 				4B89308A1EF5A1A100F53C31 /* LaunchScreen.storyboard */,
 				4B89308D1EF5A1A100F53C31 /* Info.plist */,
@@ -98,6 +101,14 @@
 				4B8930A21EF5E37F00F53C31 /* menuBarCollectionViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		4B8930EA1EF8498100F53C31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B8930EB1EF8498C00F53C31 /* Video.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +189,7 @@
 				4B8930811EF5A1A100F53C31 /* ViewController.swift in Sources */,
 				4B8930A31EF5E37F00F53C31 /* menuBarCollectionViewCell.swift in Sources */,
 				4B89307F1EF5A1A100F53C31 /* AppDelegate.swift in Sources */,
+				4B8930EC1EF8498C00F53C31 /* Video.swift in Sources */,
 				4B8930941EF5A39C00F53C31 /* homeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +356,7 @@
 				4B8930921EF5A1A100F53C31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

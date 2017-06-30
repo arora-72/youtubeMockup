@@ -19,10 +19,39 @@ let addToList: Any = []
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     
+    var videos: [Video]{
+        
+        let kanyeChannel = Channel()
+        kanyeChannel.name = "Kanye West is the best "
+        kanyeChannel.profileImageName = "kanye_profile"
+        
+        
+        let blankSpaceVideo = Video()
+        blankSpaceVideo.title = "Taylor Swift - Blank Space "
+        blankSpaceVideo.thumbnailImageView = "taylor_swift_blank_space"
+        blankSpaceVideo.channel = kanyeChannel
+        blankSpaceVideo.numberOfViews = 23789320
+        
+        
+        //bad blood video
+        let badBloodVideo = Video()
+        badBloodVideo.title = "Taylor Swift Bad Blood featuring andrew boston"
+        badBloodVideo.thumbnailImageView = "taylor_swift_bad_blood"
+        badBloodVideo.channel = kanyeChannel
+        badBloodVideo.numberOfViews = 981021
+        
+        return [blankSpaceVideo, badBloodVideo]
+        
+    }
+    
+    
+    
+    
+    
     @IBOutlet weak var collectionViewMenuBar: UICollectionView!
     
     @IBOutlet weak var collectionView: UICollectionView!
-
+    
     @IBOutlet weak var menuBar: UIView!
     
     
@@ -68,8 +97,8 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         setUpNavBarItems()
         
-           }
-
+    }
+    
     
     
     func setUpNavBarItems(){
@@ -77,12 +106,12 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         let searchImage = UIImage(named: "search_icon")?.withRenderingMode(.alwaysOriginal)
         
         let searchBarButtonItem = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: #selector(handleSearch))
-    
+        
         let moreButtonImage = UIImage(named: "nav_more_icon")?.withRenderingMode(.alwaysOriginal)
         
         let moreButtonItem = UIBarButtonItem(image: moreButtonImage, style: .plain, target: self, action: #selector(handleMoreItems))
         
-            navigationItem.rightBarButtonItems = [moreButtonItem, searchBarButtonItem]
+        navigationItem.rightBarButtonItems = [moreButtonItem, searchBarButtonItem]
         
     }
     
@@ -106,36 +135,42 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView != collectionViewMenuBar{
-        return 5
+            return videos.count
         }else{
             return 4
         }
     }
     
-        
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView != self.collectionViewMenuBar{
-        let cell: homeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! homeCollectionViewCell
-        
-        
-        cell.thumbnailImageView?.image = UIImage(named: "deathnode")
-        cell.profileImageView?.image = UIImage(named: "profilepic")
-        
-        //cell.thumbnailImageView?.layer.cornerRadius = 22
-        cell.profileImageView?.layer.cornerRadius = 25
-        cell.titleLabel?.text = "TaylorSwiftVEVO"
-        cell.subTitle?.text = "Taylor Swift - Blank Space . 1600 views . 2 years ago"
-        cell.lineView?.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
-        cell.subTitle?.textColor = UIColor.lightGray
-        
-        
-        //trying for image resizing
-        
-        //        cell.thumbnailImageView?.autoresizingMask = UIViewAutoresizing.FlexibleBottomMargin | UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleWidth
-        //        cell.thumbnailImageView.View.contentMode = UIViewContentMode.ScaleAspectFit
-        
-        return cell
+            let cell: homeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! homeCollectionViewCell
+            
+            cell.video = videos[indexPath.item]
+            
+            //        cell.thumbnailImageView?.image = UIImage(named: "deathnode")
+            //cell.profileImageView?.image = UIImage(named: "profilepic")
+            
+            
+            //cell.thumbnailImageView?.layer.cornerRadius = 22
+            cell.profileImageView?.layer.cornerRadius = 25
+            
+            //cell.titleLabel?.text = videos.
+            
+            //cell.subTitle?.text = "Taylor Swift - Blank Space . 1600 views . 2 years ago"
+            cell.lineView?.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
+            cell.subTitle?.textColor = UIColor.lightGray
+            
+            
+            //trying for image resizing
+            
+    
+            cell.thumbnailImageView?.autoresizingMask = [.flexibleBottomMargin,.flexibleHeight,.flexibleRightMargin,.flexibleLeftMargin,.flexibleTopMargin,.flexibleWidth]
+            
+            //cell.thumbnailImageView?.contentMode = .scaleAspectFit
+            
+            return cell
         }else{
             
             let cell: menuBarCollectionViewCell = collectionViewMenuBar.dequeueReusableCell(withReuseIdentifier: reuseIdentifier2, for: indexPath) as! menuBarCollectionViewCell
@@ -150,23 +185,23 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         }
     }
     
-
+    
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView != collectionViewMenuBar{
-        let height = (view.frame.width - 16 - 16) * 9 / 16
-        print(height)
-        //return CGSize(width: view.frame.width, height: height + 16 + 68)
-        return CGSize(width: view.frame.width, height: 200)
+            let height = (view.frame.width - 16 - 16) * 9 / 16
+            print(height)
+            //return CGSize(width: view.frame.width, height: height + 16 + 68)
+            return CGSize(width: view.frame.width, height: 250)
         }else{
             return CGSize(width: view.frame.width/4, height: view.frame.height)
         }
     }
     
     
-
-        
+    
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }

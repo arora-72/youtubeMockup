@@ -12,7 +12,7 @@ class menuBarCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var menuImageView: UIImageView!
     
- 
+    
     
     override var isHighlighted: Bool{
         didSet{
@@ -25,7 +25,7 @@ class menuBarCollectionViewCell: UICollectionViewCell {
         didSet{
             menuImageView.tintColor = isSelected ? UIColor.white : UIColor.rgb(red: 91, green: 14, blue: 13)
         }
-
+        
         
     }
 }
